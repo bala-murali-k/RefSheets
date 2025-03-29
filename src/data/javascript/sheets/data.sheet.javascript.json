@@ -1,0 +1,64 @@
+{
+	"data": {
+		"Array": [
+			{
+				"title": "Array",
+				"headers": "Includes",
+				"syntax": "array.includes(target)",
+				"details": "returns boolean."
+			}
+		],
+		"Object": [
+			{
+				"title": "Object",
+				"headers": "Object.keys",
+				"syntax": "Object.keys(targetObject)",
+				"details": "returns an array of object keys."
+			},
+			{
+				"title": "Object",
+				"headers": "Object.keys",
+				"syntax": "Object.keys(targetObject)",
+				"details": "returns an array of object keys."
+			}
+		],
+		"String": [
+			{
+				"title": "String",
+				"headers": "Includes",
+				"syntax": "string.includes(substring)",
+				"details": "returns boolean."
+			}
+		],
+		"Array2": [
+			{
+				"title": "Array2",
+				"headers": "Includes2",
+				"syntax": "array.includes(target)2",
+				"details": "returns boolean2."
+			}
+		],
+		"Object2": [
+			{
+				"title": "Object2",
+				"headers": "Object.keys2",
+				"syntax": "Object.keys(targetObject)2",
+				"details": "returns an array of object keys2."
+			},
+			{
+				"title": "Object3",
+				"headers": "Object.keys3",
+				"syntax": "Object.keys(targetObject)3",
+				"details": "returns an array of object keys3."
+			}
+		],
+		"String2": [
+			{
+				"title": "String2",
+				"headers": "Includes2",
+				"syntax": "string.includes(substring)2",
+				"details": "returns boolean2."
+			}
+		]
+	}
+}
