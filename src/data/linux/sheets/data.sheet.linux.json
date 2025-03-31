@@ -1,13 +1,10 @@
 {
 	"data": {
-		"Variables": [
+		"Array": [
 			{
-				"headers": "let",
-				"isSyntax": true,
-				"isClipboard": true,
-				"isDescription": true,
+				"title": "Array",
+				"headers": "Includes",
 				"syntax": "array.includes(target)",
-				"description": "Let is a keyword used to declare a block scoped variables.",
 				"details": "returns boolean."
 			},
 			{

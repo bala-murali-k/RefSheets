@@ -1,9 +1,8 @@
 import * as React from 'react'
-import { Grid, Accordion, AccordionDetails, AccordionSummary, Typography, Box, IconButton } from '@mui/material'
+import { Grid, Accordion, AccordionDetails, AccordionSummary, Typography, Box } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-import ContentCopyRoundedIcon from '@mui/icons-material/ContentCopyRounded'
 
-function ViewJavascriptCheat ({ inputData, inputFunction }: any) {
+function ViewJavascriptCheat ({ inputData }: any) {
 
     // const recievedDataHeaders: any = Object.keys(inputData.cheatData.data)
     const [recievedDataHeaders] = React.useState<any[]>(Object.keys(inputData.cheatData.data))
@@ -32,8 +31,8 @@ function ViewJavascriptCheat ({ inputData, inputFunction }: any) {
     }, [recievedDataHeaders])
 
     return (
-        // <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '90dvw', height: '100dvh' }} >
-            <Grid container sx={{ backgroundColor: '#1F2937', height: '100dvh', pl: '1rem', pr: '1rem' }} >
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} >
+            <Grid container sx={{ backgroundColor: '#1F2937' }} >
 
                 <Grid item xs={4} sx={{ pl: 1, pr: 1,  }} >
                     {firstColumn.length > 0 && 
@@ -64,34 +63,18 @@ function ViewJavascriptCheat ({ inputData, inputFunction }: any) {
                                                                 id="includes_accordion_js"
                                                                 sx={{ backgroundColor: '#1F2937', color: '#93C5FD' }}
                                                             >
-                                                                <Typography sx={{ fontWeight: 'bold', fontSize: '13px' }} >
+                                                                <Typography>
                                                                     {renderingCheats.headers}
                                                                 </Typography>
                                                             </AccordionSummary>
                                                             <AccordionDetails
                                                                 sx={{ border: '0.3px solid #1F2937' }}
                                                             >
-                                                                {
-                                                                    renderingCheats?.isDescription &&
-                                                                        <Typography sx={{ color: 'white', fontWeight: 500, fontSize: '16px' }} >
-                                                                            {renderingCheats?.description}
-                                                                        </Typography>
-                                                                }
-                                                                {
-                                                                    renderingCheats?.isSyntax &&
-                                                                        <Box sx={{ width: '98%', backgroundColor: '#111827', color: 'white', borderRadius: '5px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} 
-                                                                        className={'clipboardCopy'}
-                                                                        >
-                                                                            <Typography sx={{ pl: '10px' }} >
-                                                                                {renderingCheats.syntax}
-                                                                            </Typography>
-                                                                            <IconButton onClick={(event: any) => {
-                                                                                inputFunction.handleClipboard(renderingCheats.syntax)
-                                                                            }} >
-                                                                                <ContentCopyRoundedIcon sx={{ color: 'red' }} />
-                                                                            </IconButton>
-                                                                        </Box>
-                                                                }
+                                                                <Typography
+                                                                    sx={{ color: 'white' }}
+                                                                >
+                                                                    {`syntax: ${renderingCheats.syntax}`}
+                                                                </Typography>
                                                                 <Typography sx={{ color: 'white' }} >
                                                                     {renderingCheats.details}
                                                                 </Typography>
@@ -230,7 +213,7 @@ function ViewJavascriptCheat ({ inputData, inputFunction }: any) {
                     </Box>
                 </Grid>
             </Grid>
-        // </Box>
+        </Box>
     )
 }
 
