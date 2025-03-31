@@ -6,6 +6,12 @@
 				"headers": "Includes",
 				"syntax": "array.includes(target)",
 				"details": "returns boolean."
+			},
+			{
+				"title": "Array",
+				"headers": "Includes1",
+				"syntax": "array.includes(target)",
+				"details": "returns boolean."
 			}
 		],
 		"Object": [

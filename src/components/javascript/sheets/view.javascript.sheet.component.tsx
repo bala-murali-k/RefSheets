@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Grid, Accordion, AccordionDetails, AccordionSummary, Typography, Box } from '@mui/material'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 function ViewJavascriptCheat ({ inputData }: any) {
 
@@ -32,7 +34,7 @@ function ViewJavascriptCheat ({ inputData }: any) {
 
     return (
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} >
-            <Grid container sx={{ backgroundColor: 'green' }} >
+            <Grid container sx={{ backgroundColor: '#1F2937' }} >
 
                 <Grid item xs={4} sx={{ pl: 1, pr: 1,  }} >
                     {firstColumn.length > 0 && 
@@ -41,51 +43,41 @@ function ViewJavascriptCheat ({ inputData }: any) {
 
                             let result: any = (
                                 <Grid item xs={12} key={`${renderingData}_card`} sx={{  }} >
-                                    <Box sx={{ pt: 1, pl: 2, pr: 2, pb: 2, backgroundColor: 'orange', mt: 2 }} >
+                                    <Box sx={{ pt: 1, pl: 2, pr: 2, pb: 2, backgroundColor: '#374151', mt: 2 }} >
                                         <Box sx={{ p: 1, borderBottom: '1px solid grey' }} >
-                                            <Typography variant="body1" sx={{ fontSize: '18px', fontWeight: 900 }} >
+                                            <Typography variant="body1" sx={{ fontSize: '18px', fontWeight: 900, color: 'white' }} >
                                                 {renderingData}
                                             </Typography>
                                         </Box>
-                                        <Box sx={{ mt: 1 }} >
+                                        <Box sx={{ mt: 1, backgroundColor: '#374151' }} >
                                             {inputData.cheatData.data[renderingData].length > 0 &&
                                                 inputData.cheatData.data[renderingData].map((renderingCheats: any, index: number) => {
                                                     let innerResult: any = (
                                                         <Accordion
                                                             key={`javascript_cheat_${index}`}
-                                                            // transition={'fade'}
-                                                            slots={{
-                                                                heading: (properties: any) => {
-                                                                    return (
-                                                                        <Box {...properties} sx={{ borderRadius: 0 }} >
-                                                                        </Box>
-                                                                    )
-                                                                },
-                                                                root: (properties: any) => {
-                                                                    return (
-                                                                        <Box {...properties} sx={{ borderRadius: 0, backgroundColor: 'white' }} >
-                                                                        </Box>
-                                                                    )
-                                                                },
-                                                                // transition: (properties: any) => {
-                                                                //     return (
-                                                                //         <Fade in={checked} />
-                                                                //     )
-                                                                // }
-                                                            }}
+                                                            square={true}
+                                                            disableGutters={true}
+                                                            sx={{ backgroundColor: 'inherit' }}
                                                         >
                                                             <AccordionSummary
-                                                                expandIcon={<ArrowDownwardIcon />}
+                                                                expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
                                                                 aria-controls="includes_accordion_js_content"
                                                                 id="includes_accordion_js"
+                                                                sx={{ backgroundColor: '#1F2937', color: '#93C5FD' }}
                                                             >
                                                                 <Typography>
                                                                     {renderingCheats.headers}
                                                                 </Typography>
                                                             </AccordionSummary>
-                                                            <AccordionDetails>
-                                                                <Typography>
+                                                            <AccordionDetails
+                                                                sx={{ border: '0.3px solid #1F2937' }}
+                                                            >
+                                                                <Typography
+                                                                    sx={{ color: 'white' }}
+                                                                >
                                                                     {`syntax: ${renderingCheats.syntax}`}
+                                                                </Typography>
+                                                                <Typography sx={{ color: 'white' }} >
                                                                     {renderingCheats.details}
                                                                 </Typography>
                                                             </AccordionDetails>
@@ -108,35 +100,51 @@ function ViewJavascriptCheat ({ inputData }: any) {
                             console.log("The mapping data is : ", renderingData, inputData.cheatData.data[renderingData])
 
                             let result: any = (
-                                <Grid item xs={12} key={`${renderingData}_card`} sx={{ backgroundColor: 'lightblue' }} >
-                                    <Box sx={{ backgroundColor: '' }} >
-                                        <Typography>
-                                            {renderingData}
-                                        </Typography>
-                                        {inputData.cheatData.data[renderingData].length > 0 &&
-                                            inputData.cheatData.data[renderingData].map((renderingCheats: any, index: number) => {
-                                                let innerResult: any = (
-                                                    <Accordion key={`javascript_cheat_${index}`} >
-                                                        <AccordionSummary
-                                                            expandIcon={<ArrowDownwardIcon />}
-                                                            aria-controls="includes_accordion_js_content"
-                                                            id="includes_accordion_js"
+                                <Grid item xs={12} key={`${renderingData}_card`} sx={{  }} >
+                                    <Box sx={{ pt: 1, pl: 2, pr: 2, pb: 2, backgroundColor: '#374151', mt: 2 }} >
+                                        <Box sx={{ p: 1, borderBottom: '1px solid grey' }} >
+                                            <Typography variant="body1" sx={{ fontSize: '18px', fontWeight: 900, color: 'white' }} >
+                                                {renderingData}
+                                            </Typography>
+                                        </Box>
+                                        <Box sx={{ mt: 1, backgroundColor: '#374151' }} >
+                                            {inputData.cheatData.data[renderingData].length > 0 &&
+                                                inputData.cheatData.data[renderingData].map((renderingCheats: any, index: number) => {
+                                                    let innerResult: any = (
+                                                        <Accordion
+                                                            key={`javascript_cheat_${index}`}
+                                                            square={true}
+                                                            disableGutters={true}
+                                                            sx={{ backgroundColor: 'inherit' }}
                                                         >
-                                                            <Typography>
-                                                                {renderingCheats.headers}
-                                                            </Typography>
-                                                        </AccordionSummary>
-                                                        <AccordionDetails>
-                                                            <Typography>
-                                                                {`syntax: ${renderingCheats.syntax}`}
-                                                                {renderingCheats.details}
-                                                            </Typography>
-                                                        </AccordionDetails>
-                                                    </Accordion>
-                                                )
-                                                return innerResult
-                                            })
-                                        }
+                                                            <AccordionSummary
+                                                                expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
+                                                                aria-controls="includes_accordion_js_content"
+                                                                id="includes_accordion_js"
+                                                                sx={{ backgroundColor: '#1F2937', color: '#93C5FD' }}
+                                                            >
+                                                                <Typography>
+                                                                    {renderingCheats.headers}
+                                                                </Typography>
+                                                            </AccordionSummary>
+                                                            <AccordionDetails
+                                                                sx={{ border: '0.3px solid #1F2937' }}
+                                                            >
+                                                                <Typography
+                                                                    sx={{ color: 'white' }}
+                                                                >
+                                                                    {`syntax: ${renderingCheats.syntax}`}
+                                                                </Typography>
+                                                                <Typography sx={{ color: 'white' }} >
+                                                                    {renderingCheats.details}
+                                                                </Typography>
+                                                            </AccordionDetails>
+                                                        </Accordion>
+                                                    )
+                                                    return innerResult
+                                                })
+                                            }
+                                        </Box>
                                     </Box>
                                 </Grid>
                             )
@@ -150,41 +158,61 @@ function ViewJavascriptCheat ({ inputData }: any) {
                             console.log("The mapping data is : ", renderingData, inputData.cheatData.data[renderingData])
 
                             let result: any = (
-                                <Grid item xs={12} key={`${renderingData}_card`} sx={{ backgroundColor: 'lightblue' }} >
-                                    <Box sx={{ backgroundColor: '' }} >
-                                        <Typography>
-                                            {renderingData}
-                                        </Typography>
-                                        {inputData.cheatData.data[renderingData].length > 0 &&
-                                            inputData.cheatData.data[renderingData].map((renderingCheats: any, index: number) => {
-                                                let innerResult: any = (
-                                                    <Accordion key={`javascript_cheat_${index}`} >
-                                                        <AccordionSummary
-                                                            expandIcon={<ArrowDownwardIcon />}
-                                                            aria-controls="includes_accordion_js_content"
-                                                            id="includes_accordion_js"
+                                <Grid item xs={12} key={`${renderingData}_card`} sx={{  }} >
+                                    <Box sx={{ pt: 1, pl: 2, pr: 2, pb: 2, backgroundColor: '#374151', mt: 2 }} >
+                                        <Box sx={{ p: 1, borderBottom: '1px solid grey' }} >
+                                            <Typography variant="body1" sx={{ fontSize: '18px', fontWeight: 900, color: 'white' }} >
+                                                {renderingData}
+                                            </Typography>
+                                        </Box>
+                                        <Box sx={{ mt: 1, backgroundColor: '#374151' }} >
+                                            {inputData.cheatData.data[renderingData].length > 0 &&
+                                                inputData.cheatData.data[renderingData].map((renderingCheats: any, index: number) => {
+                                                    let innerResult: any = (
+                                                        <Accordion
+                                                            key={`javascript_cheat_${index}`}
+                                                            square={true}
+                                                            disableGutters={true}
+                                                            sx={{ backgroundColor: 'inherit' }}
                                                         >
-                                                            <Typography>
-                                                                {renderingCheats.headers}
-                                                            </Typography>
-                                                        </AccordionSummary>
-                                                        <AccordionDetails>
-                                                            <Typography>
-                                                                {`syntax: ${renderingCheats.syntax}`}
-                                                                {renderingCheats.details}
-                                                            </Typography>
-                                                        </AccordionDetails>
-                                                    </Accordion>
-                                                )
-                                                return innerResult
-                                            })
-                                        }
+                                                            <AccordionSummary
+                                                                expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
+                                                                aria-controls="includes_accordion_js_content"
+                                                                id="includes_accordion_js"
+                                                                sx={{ backgroundColor: '#1F2937', color: '#93C5FD' }}
+                                                            >
+                                                                <Typography>
+                                                                    {renderingCheats.headers}
+                                                                </Typography>
+                                                            </AccordionSummary>
+                                                            <AccordionDetails
+                                                                sx={{ border: '0.3px solid #1F2937' }}
+                                                            >
+                                                                <Typography
+                                                                    sx={{ color: 'white' }}
+                                                                >
+                                                                    {`syntax: ${renderingCheats.syntax}`}
+                                                                </Typography>
+                                                                <Typography sx={{ color: 'white' }} >
+                                                                    {renderingCheats.details}
+                                                                </Typography>
+                                                            </AccordionDetails>
+                                                        </Accordion>
+                                                    )
+                                                    return innerResult
+                                                })
+                                            }
+                                        </Box>
                                     </Box>
                                 </Grid>
                             )
                             return result
                         })
                     }
+                </Grid>
+                <Grid xs={12} >
+                    <Box sx={{ height: '10dvh', backgroundColor: '#1F2937' }} >
+                    </Box>
                 </Grid>
             </Grid>
         </Box>
