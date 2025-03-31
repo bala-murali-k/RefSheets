@@ -2,40 +2,326 @@
 	"data": {
 		"Variables": [
 			{
+				"headers": "var",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Var is a keyword used to declare a global scoped variable. Can access the variable outside the block",
+				"syntax": "var variableName = value",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
 				"headers": "let",
 				"isSyntax": true,
 				"isClipboard": true,
 				"isDescription": true,
-				"syntax": "array.includes(target)",
-				"description": "Let is a keyword used to declare a block scoped variables.",
+				"isSyntaxDescription": false,
+				"description": "Let is a keyword used to declare a block scoped variable. Cannot access the variable outside the block",
+				"syntax": "let variableName = value",
+				"syntaxDescription": "variable name can be anything. ",
 				"details": "returns boolean."
 			},
 			{
-				"title": "Array",
-				"headers": "Includes1",
-				"syntax": "array.includes(target)",
+				"headers": "const",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "const is a keyword used to declare a block scoped constant variable. Cannot access the variable outside the block and cannot change it's value",
+				"syntax": "const variableName = value",
+				"syntaxDescription": "variable name can be anything. ",
 				"details": "returns boolean."
-			}
-		],
-		"Object": [
-			{
-				"title": "Object",
-				"headers": "Object.keys",
-				"syntax": "Object.keys(targetObject)",
-				"details": "returns an array of object keys."
-			},
-			{
-				"title": "Object",
-				"headers": "Object.keys",
-				"syntax": "Object.keys(targetObject)",
-				"details": "returns an array of object keys."
 			}
 		],
 		"String": [
 			{
-				"title": "String",
-				"headers": "Includes",
-				"syntax": "string.includes(substring)",
+				"headers": "charAt",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"isReferenceLink": true,
+				"referenceLink": "hello",
+				"description": "Returns the character at the specified index.",
+				"syntax": "string.charAt(index)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "charCodeAt",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Returns the Unicode of the character at the specified index.",
+				"syntax": "string.charAt(index)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "concat",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Combines two or more strings into one.",
+				"syntax": "string1.concat(string2)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "includes",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Checks if a string contains a specified substring. returns boolean.",
+				"syntax": "string.includes(target)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "indexOf",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Returns the index of the first occurrence of a specified substring. Returns -1 if not found.",
+				"syntax": "string.indexOf(target)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "lastIndexOf",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Returns the index of the last occurrence of a specified substring. Returns -1 if not found.",
+				"syntax": "string.lastIndexOf(target)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "replace",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Combines two or more strings into one.",
+				"syntax": "string.replace(target, replace)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "replaceAll",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Replaces all occurrences of a substring with a new string.",
+				"syntax": "string.replaceAll(target, replace)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "search",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Searches for a specified substring or regular expression. Returns the index of the match or -1 if not found.",
+				"syntax": "string.search(target)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "slice",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Extracts a section of a string and returns it as a new string.",
+				"syntax": "string.slice(startindex, endindex)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "split",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Splits a string into an array of substrings based on the separator provided.",
+				"syntax": "string.split(separator)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "startsWith",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Checks if the string starts with the target or specified substring.",
+				"syntax": "string.startsWith(target)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "endsWith",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Checks if the string ends with the target or specified substring.",
+				"syntax": "string.endsWith(target)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "substring",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Similar to slice(), but doesn't accept negative indices. Returns the part of the string between startIndex and endIndex.",
+				"syntax": "string.substring(startindex, endindex)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "toLowerCase",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Converts all characters in a string to lowercase.",
+				"syntax": "string.toLowerCase()",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "toUpperCase",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Converts all characters in a string to uppercase.",
+				"syntax": "string.toUpperCase()",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "trim",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Removes whitespace from both ends of a string.",
+				"syntax": "string.trim()",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "trimStart",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Removes whitespace from the beginning of a string.",
+				"syntax": "string.trimStart()",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "trimEnd",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Removes whitespace from the end of a string.",
+				"syntax": "string.trimEnd()",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "repeat",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Returns a new string with a specified number of copies of the original string.",
+				"syntax": "string.repeat(count)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "localeCompare",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Compares two strings in the current locale. Returns a number indicating whether the string comes before, after, or is equal to the specified string.",
+				"syntax": "string1.localeCompare(string2)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "fromCharCode",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Creates a string from a sequence of Unicode character codes.",
+				"syntax": "String.fromCharCode(...codes)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "padStart",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Pads the current string with another string until the resulting string reaches the specified length.",
+				"syntax": "string.padStart(targetLength, padString)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "padEnd",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Pads the current string with another string until the resulting string reaches the specified length.",
+				"syntax": "string.padEnd(targetLength, padString)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "match",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Matches a string against a regular expression and returns the result as an array of matches.",
+				"syntax": "string.match(target)",
+				"syntaxDescription": "variable name can be anything. ",
+				"details": "returns boolean."
+			},
+			{
+				"headers": "matchAll",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": false,
+				"description": "Returns an iterator of all matches against a regular expression.",
+				"syntax": "string.matchAll(target)",
+				"syntaxDescription": "variable name can be anything. ",
 				"details": "returns boolean."
 			}
 		],

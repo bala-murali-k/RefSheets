@@ -1,5 +1,5 @@
 import ViewJavascriptCheat from './view.linux.sheet.component'
-import javascriptCheatData from './../../../data/linux/sheets/data.sheet.javascript.json'
+import javascriptCheatData from './../../../data/linux/sheets/data.sheet.linux.json'
 
 function CoreJavascriptSheets () {
 

@@ -1,4 +1,3 @@
-import * as React from 'react'
 import ViewJavascriptCheat from './view.javascript.sheet.component'
 import javascriptCheatData from './../../../data/javascript/sheets/data.sheet.javascript.json'
 import SidebarComponent from './../../../layout/sidebar/layout.sidebar.component'
