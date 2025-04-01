@@ -9,8 +9,7 @@
 				"isSyntaxDescription": false,
 				"description": "Var is a keyword used to declare a global scoped variable. Can access the variable outside the block",
 				"syntax": "var variableName = value",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "let",
@@ -20,8 +19,7 @@
 				"isSyntaxDescription": false,
 				"description": "Let is a keyword used to declare a block scoped variable. Cannot access the variable outside the block",
 				"syntax": "let variableName = value",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "const",
@@ -31,23 +29,33 @@
 				"isSyntaxDescription": false,
 				"description": "const is a keyword used to declare a block scoped constant variable. Cannot access the variable outside the block and cannot change it's value",
 				"syntax": "const variableName = value",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			}
 		],
 		"String": [
+			{
+				"headers": "at",
+				"isSyntax": true,
+				"isClipboard": true,
+				"isDescription": true,
+				"isSyntaxDescription": true,
+				"isReferenceLink": true,
+				"referenceLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/at",
+				"description": "returns a new String consisting of the single letter or symbol located at the specified index.",
+				"syntax": "string.charAt(index)",
+				"syntaxDescription": "Accepts positive and negative integers. \nNegative numbers start form the back of the string."
+			},
 			{
 				"headers": "charAt",
 				"isSyntax": true,
 				"isClipboard": true,
 				"isDescription": true,
-				"isSyntaxDescription": false,
+				"isSyntaxDescription": true,
 				"isReferenceLink": true,
-				"referenceLink": "hello",
-				"description": "Returns the character at the specified index.",
+				"referenceLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt",
+				"description": "returns a new string consisting of the single UTF-16 code unit at the specified index.",
 				"syntax": "string.charAt(index)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "returns empty string when index is unprocessable or not found. it may return lone surrogates."
 			},
 			{
 				"headers": "charCodeAt",
@@ -55,10 +63,11 @@
 				"isClipboard": true,
 				"isDescription": true,
 				"isSyntaxDescription": false,
-				"description": "Returns the Unicode of the character at the specified index.",
+				"isReferenceLink": true,
+				"referenceLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt",
+				"description": "returns an integer between 0 and 65535 representing the UTF-16 code unit at the specified index.",
 				"syntax": "string.charAt(index)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "it may return lone surrogates."
 			},
 			{
 				"headers": "concat",
@@ -66,10 +75,11 @@
 				"isClipboard": true,
 				"isDescription": true,
 				"isSyntaxDescription": false,
-				"description": "Combines two or more strings into one.",
-				"syntax": "string1.concat(string2)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"isReferenceLink": true,
+				"referenceLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat",
+				"description": "Combines two or more strings into one and returns a new string.",
+				"syntax": "string1.concat(...stringN)",
+				"syntaxDescription": "if the parameters are not of type string, they are converted to string before concat."
 			},
 			{
 				"headers": "includes",
@@ -77,10 +87,9 @@
 				"isClipboard": true,
 				"isDescription": true,
 				"isSyntaxDescription": false,
-				"description": "Checks if a string contains a specified substring. returns boolean.",
+				"description": "performs a case-sensitive search to determine whether target may be found within the string.",
 				"syntax": "string.includes(target)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "returns boolean."
 			},
 			{
 				"headers": "indexOf",
@@ -90,8 +99,7 @@
 				"isSyntaxDescription": false,
 				"description": "Returns the index of the first occurrence of a specified substring. Returns -1 if not found.",
 				"syntax": "string.indexOf(target)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "lastIndexOf",
@@ -101,8 +109,7 @@
 				"isSyntaxDescription": false,
 				"description": "Returns the index of the last occurrence of a specified substring. Returns -1 if not found.",
 				"syntax": "string.lastIndexOf(target)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "replace",
@@ -112,8 +119,7 @@
 				"isSyntaxDescription": false,
 				"description": "Combines two or more strings into one.",
 				"syntax": "string.replace(target, replace)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "replaceAll",
@@ -123,8 +129,7 @@
 				"isSyntaxDescription": false,
 				"description": "Replaces all occurrences of a substring with a new string.",
 				"syntax": "string.replaceAll(target, replace)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "search",
@@ -134,8 +139,7 @@
 				"isSyntaxDescription": false,
 				"description": "Searches for a specified substring or regular expression. Returns the index of the match or -1 if not found.",
 				"syntax": "string.search(target)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "slice",
@@ -145,8 +149,7 @@
 				"isSyntaxDescription": false,
 				"description": "Extracts a section of a string and returns it as a new string.",
 				"syntax": "string.slice(startindex, endindex)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "split",
@@ -156,8 +159,7 @@
 				"isSyntaxDescription": false,
 				"description": "Splits a string into an array of substrings based on the separator provided.",
 				"syntax": "string.split(separator)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "startsWith",
@@ -167,8 +169,7 @@
 				"isSyntaxDescription": false,
 				"description": "Checks if the string starts with the target or specified substring.",
 				"syntax": "string.startsWith(target)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "endsWith",
@@ -178,8 +179,7 @@
 				"isSyntaxDescription": false,
 				"description": "Checks if the string ends with the target or specified substring.",
 				"syntax": "string.endsWith(target)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "substring",
@@ -189,8 +189,7 @@
 				"isSyntaxDescription": false,
 				"description": "Similar to slice(), but doesn't accept negative indices. Returns the part of the string between startIndex and endIndex.",
 				"syntax": "string.substring(startindex, endindex)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "toLowerCase",
@@ -200,8 +199,7 @@
 				"isSyntaxDescription": false,
 				"description": "Converts all characters in a string to lowercase.",
 				"syntax": "string.toLowerCase()",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "toUpperCase",
@@ -211,8 +209,7 @@
 				"isSyntaxDescription": false,
 				"description": "Converts all characters in a string to uppercase.",
 				"syntax": "string.toUpperCase()",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "trim",
@@ -222,8 +219,7 @@
 				"isSyntaxDescription": false,
 				"description": "Removes whitespace from both ends of a string.",
 				"syntax": "string.trim()",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "trimStart",
@@ -233,8 +229,7 @@
 				"isSyntaxDescription": false,
 				"description": "Removes whitespace from the beginning of a string.",
 				"syntax": "string.trimStart()",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "trimEnd",
@@ -244,8 +239,7 @@
 				"isSyntaxDescription": false,
 				"description": "Removes whitespace from the end of a string.",
 				"syntax": "string.trimEnd()",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "repeat",
@@ -255,8 +249,7 @@
 				"isSyntaxDescription": false,
 				"description": "Returns a new string with a specified number of copies of the original string.",
 				"syntax": "string.repeat(count)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "localeCompare",
@@ -266,8 +259,7 @@
 				"isSyntaxDescription": false,
 				"description": "Compares two strings in the current locale. Returns a number indicating whether the string comes before, after, or is equal to the specified string.",
 				"syntax": "string1.localeCompare(string2)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "fromCharCode",
@@ -277,8 +269,7 @@
 				"isSyntaxDescription": false,
 				"description": "Creates a string from a sequence of Unicode character codes.",
 				"syntax": "String.fromCharCode(...codes)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "padStart",
@@ -288,8 +279,7 @@
 				"isSyntaxDescription": false,
 				"description": "Pads the current string with another string until the resulting string reaches the specified length.",
 				"syntax": "string.padStart(targetLength, padString)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "padEnd",
@@ -299,8 +289,7 @@
 				"isSyntaxDescription": false,
 				"description": "Pads the current string with another string until the resulting string reaches the specified length.",
 				"syntax": "string.padEnd(targetLength, padString)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "match",
@@ -310,8 +299,7 @@
 				"isSyntaxDescription": false,
 				"description": "Matches a string against a regular expression and returns the result as an array of matches.",
 				"syntax": "string.match(target)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			},
 			{
 				"headers": "matchAll",
@@ -321,8 +309,7 @@
 				"isSyntaxDescription": false,
 				"description": "Returns an iterator of all matches against a regular expression.",
 				"syntax": "string.matchAll(target)",
-				"syntaxDescription": "variable name can be anything. ",
-				"details": "returns boolean."
+				"syntaxDescription": "variable name can be anything. "
 			}
 		],
 		"Array2": [
@@ -330,28 +317,6 @@
 				"title": "Array2",
 				"headers": "Includes2",
 				"syntax": "array.includes(target)2",
-				"details": "returns boolean2."
-			}
-		],
-		"Object2": [
-			{
-				"title": "Object2",
-				"headers": "Object.keys2",
-				"syntax": "Object.keys(targetObject)2",
-				"details": "returns an array of object keys2."
-			},
-			{
-				"title": "Object3",
-				"headers": "Object.keys3",
-				"syntax": "Object.keys(targetObject)3",
-				"details": "returns an array of object keys3."
-			}
-		],
-		"String2": [
-			{
-				"title": "String2",
-				"headers": "Includes2",
-				"syntax": "string.includes(substring)2",
 				"details": "returns boolean2."
 			}
 		]

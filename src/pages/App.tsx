@@ -6,11 +6,11 @@ import './../App.css'
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/RefSheets" >
       <Routes>
-        <Route index path='/RefSheets' element={ <LandingPage /> } />
-        <Route path='/RefSheets/javascript/sheets' element={ <AppJavascript /> } />
-        <Route path='/RefSheets/linux/sheets' element={ <AppJavascript /> } />
+        <Route index path='/' element={ <LandingPage /> } />
+        <Route path='/javascript/sheets' element={ <AppJavascript /> } />
+        <Route path='/linux/sheets' element={ <AppJavascript /> } />
       </Routes>
     </BrowserRouter>
   )

@@ -37,7 +37,7 @@ function ViewJavascriptCheat ({ inputData }: any) {
         return column?.map((renderingData: any) => {
                             
             let result: any = (
-                <Grid item xs={12} key={`${renderingData}_card`} sx={{  }} >
+                <Grid item xs={12} key={`${renderingData}_card`} >
                     <Box sx={{ pt: 1, pl: 2, pr: 2, pb: 2, backgroundColor: '#374151', mt: 2 }} >
                         <Box sx={{ p: 1, borderBottom: '1px solid grey' }} >
                             <Typography variant="body1" sx={{ fontSize: '18px', fontWeight: 900, color: 'white' }} >
@@ -66,7 +66,25 @@ function ViewJavascriptCheat ({ inputData }: any) {
                                                     </Typography>
                                                     {
                                                         renderingCheats.isReferenceLink && 
-                                                            <Button variant={"outlined"} href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt" startIcon={<MenuBookRoundedIcon sx={{ color: '#FBBF24' }} />} size="small" sx={{ color: 'white', fontSize: '12px', border: '1px solid rgba(251, 191, 36, 0.5)', borderRadius: '25px', '& :hover': { border: '1px solid rgba(251, 191, 36, 1)' }, textAlign: 'center', textDecoration: 'none' }} >
+                                                            <Button
+                                                                variant={"outlined"} 
+                                                                href={renderingCheats.referenceLink}
+                                                                target={"_blank"}
+                                                                rel={"noopener noreferrer"}
+                                                                size="small"
+                                                                startIcon={<MenuBookRoundedIcon sx={{ color: '#FBBF24' }} />}
+                                                                sx={{ 
+                                                                    color: 'white', 
+                                                                    fontSize: '10px', 
+                                                                    fontWeight: '450',
+                                                                    border: '1px solid rgba(251, 191, 36, 0.5)', 
+                                                                    borderRadius: '25px', 
+                                                                    display: 'flex',
+                                                                    alignItems: 'center',
+                                                                    textAlign: 'center', 
+                                                                    textDecoration: 'none' 
+                                                                }}
+                                                            >
                                                                 <Typography sx={{ fontWeight: 'inherit', fontSize: 'inherit', textAlign: 'center' }} >
                                                                     Docs
                                                                 </Typography>
@@ -74,12 +92,10 @@ function ViewJavascriptCheat ({ inputData }: any) {
                                                     }
                                                 </Box>
                                             </AccordionSummary>
-                                            <AccordionDetails
-                                                sx={{ border: '0.3px solid #1F2937' }}
-                                            >
+                                            <AccordionDetails sx={{ border: '0.3px solid #1F2937' }} >
                                                 {
                                                     renderingCheats?.isDescription &&
-                                                        <Typography sx={{ color: 'white', fontWeight: 500, fontSize: '16px' }} >
+                                                        <Typography sx={{ color: '#d4d4d8', fontWeight: 'bold', fontSize: '14px' }} >
                                                             {renderingCheats?.description}
                                                         </Typography>
                                                 }
@@ -113,7 +129,7 @@ function ViewJavascriptCheat ({ inputData }: any) {
                                                 }
                                                 {
                                                     renderingCheats.isSyntaxDescription &&
-                                                    <Typography>
+                                                    <Typography sx={{ color: '#d4d4d8', fontWeight: 'normal', fontSize: '14px', whiteSpace: 'preWrap' }} >
                                                         {renderingCheats.syntaxDescription}
                                                     </Typography>
                                                 }

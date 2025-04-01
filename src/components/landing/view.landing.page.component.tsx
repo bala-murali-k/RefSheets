@@ -5,12 +5,12 @@ function ViewLandingComponent () {
 	return (
 		<Box sx={{ width: '100dvw', height: '100dvh', display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
 			<Box sx={{ height: '80dvh', width: '60dvw' }} >
-				<Link to='/RefSheets/javascript/sheets' style={{ textDecoration: 'none', color: 'inherit' }} >
+				<Link to='/javascript/sheets' style={{ textDecoration: 'none', color: 'inherit' }} >
 					<Typography>
 						Javascript
 					</Typography>
 				</Link>
-				<Link to='/RefSheets/linux/sheets' style={{ textDecoration: 'none', color: 'inherit' }} >
+				<Link to='/linux/sheets' style={{ textDecoration: 'none', color: 'inherit' }} >
 					<Typography>
 						Linux
 					</Typography>
