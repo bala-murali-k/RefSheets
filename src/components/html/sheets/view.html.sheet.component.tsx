@@ -4,7 +4,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import ContentCopyRoundedIcon from '@mui/icons-material/ContentCopyRounded'
 import MenuBookRoundedIcon from '@mui/icons-material/MenuBookRounded'
 
-function ViewJavascriptCheat ({ inputData }: any) {
+function ViewHtmlCheat ({ inputData }: any) {
 
     const [recievedDataHeaders] = React.useState<any[]>(Object.keys(inputData.cheatData.data))
     const [firstColumn, setFirstColumn] = React.useState<any[]>([])
@@ -172,5 +172,5 @@ function ViewJavascriptCheat ({ inputData }: any) {
     )
 }
 
-export default ViewJavascriptCheat
+export default ViewHtmlCheat
     
