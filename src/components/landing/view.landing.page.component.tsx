@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, Button } from '@mui/material'
 import { Link } from 'react-router-dom'
 // import useSidebarStore from './../../store/sidebar/store.sidebar.global'
 
@@ -48,9 +48,52 @@ function ViewLandingComponent () {
 	}
 
 	return (
-		<Box sx={{ width: '100dvw', height: '100dvh' }} >
-			{landingPlaceholder()}
-
+		<Box sx={{ width: '100dvw', height: '100dvh', backgroundColor: '#000000ff' }} >
+			{/*{landingPlaceholder()}*/}
+			<Box sx={{ display: 'flex', width: '100%', height: '80%', textAlign: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }} >
+				<Typography variant="h1" sx={{ color: '#ffcf33ff', width: '50%' }} >
+					Your Quick References Here.
+				</Typography>
+				<Box sx={{ width: '50%' }} >
+				</Box>
+			</Box>
+			<Box sx={{ width: '100%', height: '20%', display: 'flex', alignItems: 'center', justifyContent: 'space-around' }} >
+				<Button color={'error'} variant={'contained'} sx={{ color: 'white', borderRadius: '40px' }} >
+					<Link to='/html/sheets' style={{ textDecoration: 'none', color: 'inherit' }} >
+						<Typography onClick={() => {}} >
+							Html
+						</Typography>
+					</Link>
+				</Button>
+				<Button color={'error'} variant={'contained'} sx={{ color: 'white', borderRadius: '40px' }} >
+					<Link to='/javascript/sheets' style={{ textDecoration: 'none', color: 'inherit' }} >
+						<Typography>
+							Javascript
+						</Typography>
+					</Link>
+				</Button>
+				<Button color={'error'} variant={'contained'} sx={{ color: 'white', borderRadius: '40px' }} >
+					<Link to='/linux/sheets' style={{ textDecoration: 'none', color: 'inherit' }} >
+						<Typography>
+							Linux
+						</Typography>
+					</Link>
+				</Button>
+				<Button color={'error'} variant={'contained'} sx={{ color: 'white', borderRadius: '40px' }} >
+					<Link to='/bugged/fixes' style={{ textDecoration: 'none', color: 'inherit' }} >
+						<Typography>
+							Problems
+						</Typography>
+					</Link>
+				</Button>
+				<Button color={'error'} variant={'contained'} sx={{ color: 'white', borderRadius: '40px' }} >
+					<Link to='/bugged/fixes' style={{ textDecoration: 'none', color: 'inherit' }} >
+						<Typography>
+							Problems
+						</Typography>
+					</Link>
+				</Button>
+			</Box>
 		</Box>
 	)
 }
