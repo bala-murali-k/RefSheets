@@ -5,6 +5,11 @@ function ViewLandingComponent () {
 	return (
 		<Box sx={{ width: '100dvw', height: '100dvh', display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
 			<Box sx={{ height: '80dvh', width: '60dvw' }} >
+				<Link to='/html/sheets' style={{ textDecoration: 'none', color: 'inherit' }} >
+					<Typography>
+						Html
+					</Typography>
+				</Link>
 				<Link to='/javascript/sheets' style={{ textDecoration: 'none', color: 'inherit' }} >
 					<Typography>
 						Javascript
@@ -20,13 +25,11 @@ function ViewLandingComponent () {
 					Future Plans
 				</Typography>
 				<Typography>
-					1. Copy Syntax to clipboard
+					1. Expand the references
 					<br />
-					2. Expand the references
+					2. Add the Informations
 					<br />
-					3. Add the Informations
-					<br />
-					4. Implement Side Bar
+					3. Implement Side Bar
 				</Typography>
 
 			</Box>
